@@ -24,4 +24,5 @@ El modelo está compuesto por las siguientes entidades:
 
 ## Base de Datos
 El script SQL para la creación de la base de datos se encuentra incluido en el repositorio.
-   ●futbol_db.sql
+
+- futbol_db.sql
