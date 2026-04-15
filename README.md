@@ -20,6 +20,6 @@ El modelo está compuesto por las siguientes entidades:
 - Transferencia: movimientos de jugadores entre clubes.
 
 ## Diagrama Entidad-Relación
-![DER](imagen der.png)
+![DER](der.png)
 ## Base de Datos
 El script SQL para la creación de la base de datos se encuentra incluido en el repositorio.
