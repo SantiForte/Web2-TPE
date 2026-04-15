@@ -21,5 +21,7 @@ El modelo está compuesto por las siguientes entidades:
 
 ## Diagrama Entidad-Relación
 ![DER](der.png)
+
 ## Base de Datos
 El script SQL para la creación de la base de datos se encuentra incluido en el repositorio.
+   ●futbol_db.sql
