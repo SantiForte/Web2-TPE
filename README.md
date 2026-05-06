@@ -5,19 +5,17 @@ TPE de Web2 (Tadeo y Santiago)
 - Carrizo Tadeo  - carrizotadeoo@gmail.com
 
 ## Temática
-Sistema de gestión de fútbol: clubes, futbolistas y mercado de pases.
+Sistema de gestión de fútbol: clubes y futbolistas.
 
 ## Descripción
-El sistema permite almacenar información sobre clubes de fútbol, jugadores y sus transferencias. 
-Se pueden consultar los futbolistas de un club, el club actual de un jugador y las transferencias realizadas en un período determinado.
+El sistema permite almacenar información sobre clubes de fútbol y jugadores.
+Se pueden consultar los futbolistas que pertenecen a cada club y el club actual de cada jugador.
 
 ## Modelo de Datos
 El modelo está compuesto por las siguientes entidades:
 
 - Club: representa a los equipos de fútbol.
 - Futbolista: representa a los jugadores.
-- Contrato: relación entre jugador y club en un período.
-- Transferencia: movimientos de jugadores entre clubes.
 
 ## Diagrama Entidad-Relación
 ![DER](der.png)
