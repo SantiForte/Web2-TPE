@@ -18,7 +18,7 @@ El modelo está compuesto por las siguientes entidades:
 - Futbolista: representa a los jugadores.
 
 ## Diagrama Entidad-Relación
-![DER](der.png)
+![DER](derrr.png)
 
 ## Base de Datos
 El script SQL para la creación de la base de datos se encuentra incluido en el repositorio.
