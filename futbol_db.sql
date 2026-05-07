@@ -16,4 +16,6 @@ CREATE TABLE futbolista (
     fecha_nacimiento DATE,
     nacionalidad VARCHAR(50),
     posicion VARCHAR(50)
+    id_club INT,
+    FOREIGN KEY (id_club) REFERENCES club(id_club)
 );
