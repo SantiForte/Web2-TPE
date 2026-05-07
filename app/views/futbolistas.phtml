@@ -1,0 +1,23 @@
+<?php require __DIR__ . '/templates/layout/header.phtml'; ?>
+
+<div class="container mt-4">
+
+    <h1>Futbolistas</h1>
+
+    <ul>
+        <?php foreach ($futbolistas as $f): ?>
+            <li>
+                <a href="<?= BASE_URL ?>futbolistas/<?= $f->id_jugador ?>">
+                    <?= $f->nombre ?> <?= $f->apellido ?>
+                </a>
+
+                -
+                <?= $f->posicion ?> -
+                <b><?= $f->club ?? "Sin club" ?></b>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+</div>
+
+<?php require __DIR__ . '/templates/layout/footer.phtml'; ?>

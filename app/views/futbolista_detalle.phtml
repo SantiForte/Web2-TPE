@@ -1,0 +1,17 @@
+<?php require __DIR__ . '/templates/layout/header.phtml'; ?>
+
+<div class="container mt-4">
+
+    <h2>Detalle del futbolista</h2>
+
+    <p><b>Nombre:</b> <?= $f->nombre ?></p>
+    <p><b>Posición:</b> <?= $f->posicion ?></p>
+    <p><b>Club:</b> <?= $f->club ?? "Sin club" ?></p>
+
+    <a class="btn btn-dark mt-3" href="<?= BASE_URL ?>futbolistas">
+        Volver
+    </a>
+
+</div>
+
+<?php require __DIR__ . '/templates/layout/footer.phtml'; ?>

@@ -1,0 +1,53 @@
+<?php require __DIR__ . '/templates/layout/header.phtml'; ?>
+
+<div class="container mt-4">
+
+    <h2>Formulario Futbolista</h2>
+
+    <?php
+        $editMode = isset($futbolista);
+        $action = $editMode
+            ? BASE_URL . 'futbolistas/edit/' . $futbolista->id_jugador
+            : BASE_URL . 'futbolistas/add';
+    ?>
+
+    <form method="POST" action="<?= $action ?>">
+
+        <div class="mb-3">
+            <label>Nombre</label>
+            <input type="text" name="nombre"
+                   value="<?= $editMode ? $futbolista->nombre : '' ?>"
+                   class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Posición</label>
+            <input type="text" name="posicion"
+                   value="<?= $editMode ? $futbolista->posicion : '' ?>"
+                   class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Club</label>
+
+            <select name="id_club" class="form-control" required>
+                <?php foreach ($clubes as $c): ?>
+                    <option value="<?= $c->id_club ?>"
+                        <?= $editMode && $futbolista->id_club == $c->id_club ? 'selected' : '' ?>>
+
+                        <?= $c->nombre ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+
+        </div>
+
+        <button class="btn btn-success">
+            <?= $editMode ? 'Actualizar' : 'Guardar' ?>
+        </button>
+
+    </form>
+
+</div>
+
+<?php require __DIR__ . '/templates/layout/footer.phtml'; ?>
