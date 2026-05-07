@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../config.php';
+
 class FutbolistasModel {
 
     private $db;
@@ -7,16 +9,15 @@ class FutbolistasModel {
     public function __construct() {
 
         $this->db = new PDO(
-            'mysql:host=localhost;dbname=futbol_db;charset=utf8',
-            'root',
-            '',
+            "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8",
+            DB_USER,
+            DB_PASS,
             [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ]
         );
     }
 
-    // LISTADO
     public function getAllWithClub() {
 
         $query = $this->db->prepare("
@@ -26,11 +27,9 @@ class FutbolistasModel {
         ");
 
         $query->execute();
-
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    // DETALLE
     public function getById($id) {
 
         $query = $this->db->prepare("
@@ -41,11 +40,9 @@ class FutbolistasModel {
         ");
 
         $query->execute([$id]);
-
         return $query->fetch(PDO::FETCH_OBJ);
     }
 
-    // CLUBES
     public function getClubes() {
 
         $query = $this->db->prepare("SELECT * FROM club");
@@ -54,7 +51,6 @@ class FutbolistasModel {
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
-    // INSERT
     public function insert($nombre, $posicion, $id_club) {
 
         $query = $this->db->prepare("
@@ -65,7 +61,6 @@ class FutbolistasModel {
         $query->execute([$nombre, $posicion, $id_club]);
     }
 
-    // DELETE
     public function delete($id) {
 
         $query = $this->db->prepare("
@@ -75,7 +70,6 @@ class FutbolistasModel {
         $query->execute([$id]);
     }
 
-    // UPDATE
     public function update($id, $nombre, $posicion, $id_club) {
 
         $query = $this->db->prepare("
